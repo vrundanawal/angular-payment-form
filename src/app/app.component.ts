@@ -9,6 +9,7 @@ export class AppComponent {
   //name: string  = ''
   name: string | undefined;
   date: string | undefined;
+  amount: number | undefined;
 
   //method to handle name
   handleOnName(value: string) {
@@ -17,5 +18,11 @@ export class AppComponent {
   //method to handle Date
   handleOnDate(value: string) {
     this.date = value;
+  }
+
+  //method to handle Amount
+  handleOnAmount(value: string) {
+    //convert number into string
+    this.amount = parseFloat(value);
   }
 }
