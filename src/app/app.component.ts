@@ -11,6 +11,7 @@ export class AppComponent {
   inputDate: string | undefined;
   amount: number | undefined;
   height: number | undefined;
+  miles: number | undefined;
 
   //json
   car = {
@@ -36,5 +37,9 @@ export class AppComponent {
   //method to handle Height
   handleOnHeight(value: string) {
     this.height = parseFloat(value);
+  }
+  //method to handle miles
+  handleOnMiles(value: string) {
+    this.miles = parseFloat(value);
   }
 }
