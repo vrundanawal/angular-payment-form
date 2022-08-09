@@ -8,8 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   //name: string  = ''
   name: string | undefined;
+  date: string | undefined;
+
   //method to handle name
   handleOnName(value: string) {
     this.name = value;
+  }
+  //method to handle Date
+  handleOnDate(value: string) {
+    this.date = value;
   }
 }
