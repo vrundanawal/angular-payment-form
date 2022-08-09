@@ -80,13 +80,13 @@
     </div>
     <div class="col">
       <label><b>Kilometers</b></label>
-      <div>
+      <div *ngIf="(miles | convert: 'km') > 10">
         <!-- provide the argument to the pipes syntax |  -->
-        {{ miles | convert: "cm" }}
+        {{ miles | convert: "km" | number: "1.0-2" }}
       </div>
     </div>
   </div>
 
   <!-- Json pipe  used only for debugging purposes-->
-  {{ car | json }}
+  <!-- {{ car | json }} -->
 </div>
