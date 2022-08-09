@@ -1,5 +1,6 @@
 <div class="container">
   <h3>Payee Form</h3>
+  <!-- Name -->
   <div class="row">
     <div class="form-group col">
       <label for="">Payee Name</label>
@@ -15,7 +16,7 @@
       </div>
     </div>
   </div>
-
+  <!-- Date -->
   <div class="row">
     <div class="form-group col">
       <label for="">Payment Date</label>
@@ -29,11 +30,11 @@
       <label><b>Date</b></label>
       <div>
         <!-- provide the argument to the pipes syntax | date : "d" -->
-        {{ date | date: "MMMM d, y" }}
+        {{ inputDate | date: "MMMM d, y" }}
       </div>
     </div>
   </div>
-
+  <!-- Amount -->
   <div class="row">
     <div class="form-group col">
       <label for="">Payment Amount</label>
@@ -50,4 +51,24 @@
       </div>
     </div>
   </div>
+  <!-- Height -->
+  <div class="row">
+    <div class="form-group col">
+      <label for="">Height</label>
+      <input
+        class="form-control"
+        (input)="handleOnHeight($any($event.target).value)"
+      />
+    </div>
+    <div class="col">
+      <label><b>Height</b></label>
+      <div>
+        <!-- provide the argument to the pipes syntax |  -->
+        {{ height | number: "1.0-0" }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Json pipe  used only for debugging purposes-->
+  {{ car | json }}
 </div>

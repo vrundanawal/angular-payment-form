@@ -8,8 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
   //name: string  = ''
   name: string | undefined;
-  date: string | undefined;
+  inputDate: string | undefined;
   amount: number | undefined;
+  height: number | undefined;
+
+  //json
+  car = {
+    make: 'Toyota',
+    model: 'Camry',
+    year: 2022,
+  };
 
   //method to handle name
   handleOnName(value: string) {
@@ -17,12 +25,16 @@ export class AppComponent {
   }
   //method to handle Date
   handleOnDate(value: string) {
-    this.date = value;
+    this.inputDate = value;
   }
 
   //method to handle Amount
   handleOnAmount(value: string) {
     //convert number into string
     this.amount = parseFloat(value);
+  }
+  //method to handle Height
+  handleOnHeight(value: string) {
+    this.height = parseFloat(value);
   }
 }
